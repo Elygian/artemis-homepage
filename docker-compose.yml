@@ -19,7 +19,7 @@ services:
       - "traefik.http.routers.artemis.entrypoints=websecure"
       - "traefik.http.routers.artemis.tls=true"
       - "traefik.http.routers.artemis.tls.certresolver=myresolver"
-      - "traefik.http.services.artemis.loadbalancer.server.port=3000"
+      - "traefik.http.services.artemis.loadbalancer.server.port=80"
 
 networks:
   traefik:

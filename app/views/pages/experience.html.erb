@@ -1,0 +1,24 @@
+<section>
+  <p class="mb-2 text-xs uppercase tracking-[0.2em] text-amber-300">Professional</p>
+  <h1 class="text-3xl font-semibold tracking-tight text-stone-100">Experience</h1>
+
+  <div class="mt-8 space-y-6">
+    <% @experience.each do |role| %>
+      <article class="rounded-xl border border-stone-800 bg-stone-900/40 p-5">
+        <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h2 class="text-lg font-medium text-stone-100"><%= role["title"] %></h2>
+            <p class="text-sm text-stone-300"><%= role["company"] %> - <%= role["location"] %></p>
+          </div>
+          <p class="text-xs uppercase tracking-[0.15em] text-stone-400"><%= role["date_range"] %></p>
+        </div>
+        <p class="mt-3 text-sm leading-6 text-stone-300"><%= role["description"] %></p>
+        <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-stone-300">
+          <% role.fetch("highlights", []).each do |item| %>
+            <li><%= item %></li>
+          <% end %>
+        </ul>
+      </article>
+    <% end %>
+  </div>
+</section>

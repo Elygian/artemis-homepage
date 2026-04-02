@@ -1,0 +1,6 @@
+projects:
+  - title: This Site!
+    description: A personal homepage and blog built with Ruby on Rails, hosted on my homelab.
+    url: https://github.com/Elygian/artemis-homepage.git
+    tags: [Rails, Ruby, Homelab, Copilot]
+    homelab: true

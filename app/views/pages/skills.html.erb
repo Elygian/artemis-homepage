@@ -1,0 +1,13 @@
+<section>
+  <p class="mb-2 text-xs uppercase tracking-[0.2em] text-amber-300">Toolbox</p>
+  <h1 class="text-3xl font-semibold tracking-tight text-stone-100">Skills</h1>
+
+  <div class="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+    <% @skills.each do |skill| %>
+      <article class="h-full rounded-xl border border-stone-800 bg-stone-900/40 p-4 sm:p-5">
+        <h2 class="text-base font-medium text-stone-100 sm:text-lg"><%= skill["title"] %></h2>
+        <p class="mt-1 text-sm leading-6 text-stone-300"><%= skill["description"] %></p>
+      </article>
+    <% end %>
+  </div>
+</section>

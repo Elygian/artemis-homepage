@@ -1,0 +1,19 @@
+<article class="mx-auto max-w-3xl">
+  <%= link_to "Back to blog", blog_path, class: "text-sm text-amber-300 hover:text-amber-200" %>
+
+  <h1 class="mt-4 text-3xl font-semibold tracking-tight text-stone-100"><%= @post["title"] %></h1>
+  <p class="mt-2 text-xs uppercase tracking-[0.15em] text-stone-400"><%= @post["date"] %></p>
+
+  <div class="mt-3 flex flex-wrap gap-2">
+    <% @post.fetch("tags", []).each do |tag| %>
+      <span class="rounded-md border border-stone-700 px-2 py-1 text-xs text-stone-300"><%= tag %></span>
+    <% end %>
+  </div>
+
+  <div class="mt-8 max-w-none [&>p+p]:mt-4">
+    <%= simple_format(
+      @post["body"].to_s,
+      { class: "leading-7 text-stone-300" }
+    ) %>
+  </div>
+</article>

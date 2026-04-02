@@ -1,0 +1,23 @@
+<section>
+  <p class="mb-2 text-xs uppercase tracking-[0.2em] text-amber-300">Journal</p>
+  <h1 class="text-3xl font-semibold tracking-tight text-stone-100">Blog</h1>
+
+  <div class="mt-8 space-y-4">
+    <% @posts.each do |post| %>
+      <article class="rounded-xl border border-stone-800 bg-stone-900/40 p-5">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <h2 class="text-lg font-medium text-stone-100">
+            <%= link_to post["title"], blog_post_path(post["slug"]), class: "hover:text-amber-300" %>
+          </h2>
+          <p class="text-xs uppercase tracking-[0.15em] text-stone-400"><%= post["date"] %></p>
+        </div>
+
+        <div class="mt-3 flex flex-wrap gap-2">
+          <% post.fetch("tags", []).each do |tag| %>
+            <span class="rounded-md border border-stone-700 px-2 py-1 text-xs text-stone-300"><%= tag %></span>
+          <% end %>
+        </div>
+      </article>
+    <% end %>
+  </div>
+</section>

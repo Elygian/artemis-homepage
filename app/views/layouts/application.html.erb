@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Artemis Homepage" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Artemis Homepage">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="min-h-screen bg-stone-950 text-stone-100 antialiased">
+    <div class="mx-auto max-w-5xl px-5 py-8 sm:px-8 sm:py-10">
+      <header class="mb-10 border-b border-stone-800 pb-6">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <%= link_to "Lucas Archbold Jones", root_path, class: "text-2xl font-semibold tracking-tight text-amber-300" %>
+            <p class="mt-1 text-sm text-stone-400">Senior Azure DevOps Engineer and homelab/selfhost enthusiast</p>
+          </div>
+
+          <nav class="flex flex-wrap gap-2 text-sm" aria-label="Primary navigation">
+            <% nav_items = [
+              ["Home", root_path],
+              ["Experience", experience_path],
+              ["Projects", projects_path],
+              ["Skills", skills_path],
+              ["Blog", blog_path],
+              ["Contact", contact_path]
+            ] %>
+
+            <% nav_items.each do |label, path| %>
+              <% active = current_page?(path) %>
+              <%= link_to label, path,
+                  class: [
+                    "rounded-md px-3 py-1.5 transition",
+                    active ? "bg-amber-300 text-stone-900" : "text-stone-300 hover:bg-stone-800 hover:text-stone-100"
+                  ].join(" ") %>
+            <% end %>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <%= yield %>
+      </main>
+
+      <footer class="mt-16 border-t border-stone-800 pt-6 text-xs text-stone-500">
+        <p>Built with Rails 8 and Tailwind CSS.</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+experience:
+  - title: Senior Azure DevOps Engineer
+    company: Version 1
+    location: Remote
+    date_range: 2023 - Present
+    description: Design and implement secure, scalable application infrastructure on Azure.
+    highlights:
+      - Designing, implementing, and managing tailored secure, scalable application infrastructure
+      - Orchestrating the deployment of complex infrastructures with scalability, security, and cost-effectiveness in mind
+      - Leveraging DevOps tooling for automation, ensuring rapid and reliable code deployments      
+
+  - title: DevOps Engineer
+    company: Becrypt Ltd
+    location: London, UK
+    date_range: 2022 - 2023
+    description: Automated cloud infrastructure management and cost optimization for a cybersecurity company.
+    highlights:
+      - Led a large-scale rewrite/refactor of the Python codebase to interface with Azure, allowing complex test environments to be created and torn down automatically.
+      - Implemented checks and balances using automated scripts to minimise the cost of Becrypt’s cloud environment (minimising unutilised infrastructure and ensuring VM auto-shutdown etc.)
+      - Assisted with the implementation of SonarQube, helping to encourage take-up in the development teams.
+
+  - title: Platform Operations Engineer
+    company: British Standards Institution
+    location: London, UK
+    date_range: 2019 - 2022
+    description: Worked as a kind of “jack of all trades” team within IT, responsible for all aspects of BSI’s internal systems and external online presence.
+    highlights:
+      - Developing CI/CD pipelines for the deployment of .NET, Java, and JavaScript applications as well as an eCommerce platform hosted on Kubernetes .
+      - Implemented and maintained static code analysis pipelines for detection of security vulnerabilities and enforcing code quality gates
+      - Set-up, managed and maintained infrastructure (in the cloud and on-prem) for web and application hosting, database, and archival purposes

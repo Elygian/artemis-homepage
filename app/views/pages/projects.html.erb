@@ -1,0 +1,33 @@
+<section>
+  <p class="mb-2 text-xs uppercase tracking-[0.2em] text-amber-300">Build log</p>
+  <h1 class="text-3xl font-semibold tracking-tight text-stone-100">Projects</h1>
+
+  <div class="mt-8 grid gap-4 sm:grid-cols-2">
+    <% @projects.each do |project| %>
+      <article class="rounded-xl border border-stone-800 bg-stone-900/40 p-5">
+        <div class="mb-2 flex items-center justify-between gap-3">
+          <h2 class="text-lg font-medium text-stone-100"><%= project["title"] %></h2>
+          <% if project["homelab"] %>
+            <span class="rounded-full bg-emerald-500/20 px-2 py-1 text-xs text-emerald-300">Homelab</span>
+          <% else %>
+            <span class="rounded-full bg-sky-500/20 px-2 py-1 text-xs text-sky-300">Professional</span>
+          <% end %>
+        </div>
+
+        <p class="text-sm leading-6 text-stone-300"><%= project["description"] %></p>
+
+        <div class="mt-3 flex flex-wrap gap-2">
+          <% project.fetch("tags", []).each do |tag| %>
+            <span class="rounded-md border border-stone-700 px-2 py-1 text-xs text-stone-300"><%= tag %></span>
+          <% end %>
+        </div>
+
+        <% if project["url"].present? %>
+          <div class="mt-4">
+            <%= link_to "View project", project["url"], target: "_blank", rel: "noopener", class: "text-sm text-amber-300 hover:text-amber-200" %>
+          </div>
+        <% end %>
+      </article>
+    <% end %>
+  </div>
+</section>

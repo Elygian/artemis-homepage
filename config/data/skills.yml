@@ -1,0 +1,24 @@
+skills:
+  - title: AZ-104 Certified
+    description: Microsoft Azure Administrator certification covering core Azure platform administration and operations.
+
+  - title: CI/CD Pipelines
+    description: Experience building and maintaining YAML pipelines in Azure DevOps, with some Jenkins exposure.
+
+  - title: Infrastructure as Code
+    description: Builds repeatable infrastructure with Terraform and machine image pipelines with Packer.
+
+  - title: Entra ID Administration
+    description: User and group management in Entra ID (Azure AD), including access lifecycle and role administration.
+
+  - title: Scripting and Cloud Automation
+    description: Automation workflows written in Python, PowerShell, and Bash for infrastructure and platform operations.
+
+  - title: Source Control Workflows
+    description: Daily use of Git and Azure DevOps repositories with branching, pull requests, and release workflows.
+
+  - title: Containers and Orchestration
+    description: Experience administering Docker for containerized applications, with some Kubernetes exposure.
+
+  - title: Technical Writing and Presentation
+    description: Strong written communication with the ability to present data and technical information clearly.

@@ -1,0 +1,9 @@
+posts:
+  - title: Building This Site
+    date: 2026-04-02
+    slug: building-this-site
+    tags: [Homelab, AI, Arch Linux, Omarchy]
+    body: |
+      I built this site in about 10 minutes using Github Copilot, despite my hangups about using AI-generated code and the use of AI outside of the ever increasing subset of niche use cases that don't make me feel uneasy. I have been tinkering with a Linux distribution called Omarchy recently, having installed it on a whim after seeing a demo by it's creator David Heinemeier Hansson. In the video he shows off how easy it is to install various development tools and programming languages, due to the fact the distro is targeted at developers, as well as "anyone who loves computers". One of the aforementioned tools is Ruby on Rails (of which Hansson is also the creator), a name which I have heard, without ever really understanding what it was.
+      
+      Thanks to a license I have access to through work, I was able to use Copilot to help with setting up the site. Thanks to a relatively new (to me, at least) mode called Plan mode, I was able to get Copilot to make me a plan for how to set up a new Rails project, customise it to fit my prompt, and eventually execute said plan in Agent mode. Though the result is fairly basic and not a fully fleshed out site, it does the job of giving me a place to link to on my CV and to experiment with hosting a Rails app on my homelab.

@@ -1,0 +1,26 @@
+services:
+  artemis-homepage:
+    build:
+      context: .
+    image: artemis-homepage:latest
+    container_name: artemis-homepage
+    restart: unless-stopped
+    environment:
+      RAILS_ENV: production
+      RAILS_LOG_LEVEL: info
+      RAILS_MASTER_KEY: "${RAILS_MASTER_KEY}"
+      SECRET_KEY_BASE: "${SECRET_KEY_BASE}"
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.artemis.rule=Host(`cv.artemis-lab.dev`)"
+      - "traefik.http.routers.artemis.entrypoints=websecure"
+      - "traefik.http.routers.artemis.tls=true"
+      - "traefik.http.routers.artemis.tls.certresolver=myresolver"
+      - "traefik.http.services.artemis.loadbalancer.server.port=3000"
+
+networks:
+  traefik:
+    external: true

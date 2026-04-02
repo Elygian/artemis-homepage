@@ -4,3 +4,9 @@ projects:
     url: https://github.com/Elygian/artemis-homepage.git
     tags: [Rails, Ruby, Homelab, Copilot]
     homelab: true
+
+  - title: Terraform "Mini Landing Zone"
+    description: A Terraform project to set up a minimal landing zone for cloud infrastructure.
+    url: https://github.com/Elygian/terraform-mini-lz
+    tags: [Terraform, Cloud, Infrastructure]
+    homelab: false

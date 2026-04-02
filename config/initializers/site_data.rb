@@ -4,7 +4,7 @@ module SiteData
   module_function
 
   DATA_DIR = Rails.root.join("config", "data").freeze
-  CACHE = {}.freeze
+  CACHE = {}
 
   def load_yaml_file(filename)
     path = DATA_DIR.join(filename)
